@@ -1,4 +1,4 @@
-## Dataset
+## Instrument
 
 Req = required. If nothing indicated : optional
 
@@ -9,7 +9,7 @@ Req = required. If nothing indicated : optional
 | instrumentManufacturer | string | x | Manufacturer of the instrument | |
 | instrumentSerialNumber | string | x | Serial number of the instrument |  |
 | instrumentCharacteristics | array | x | Project last updated date/timestamp |  |
-| sensors | array | x |  |  |
+| sensors | array of sensors | x |  |  |
 
 
 ### Sensor object
