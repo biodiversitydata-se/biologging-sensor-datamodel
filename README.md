@@ -1,7 +1,7 @@
 # sensorproject-datamodel
 Datamodel documentation of the sensor project
 
-## Datamodel used in the [sensor project API](https://github.com/biodiversitydata-se/sensorproject) and client
+## Datamodel used in the [sensor project API](https://github.com/biodiversitydata-se/sensorprojectAPI) and client
 
 ### Objects
 
