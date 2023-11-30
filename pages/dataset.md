@@ -8,7 +8,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | ---------- | ------ | --- | ----------- | ------- |
 | datasetID | string | R |  Unique identifier for a dataset. Recommended format: ... (should be the GBIF dataset DOI) | geolocator_great_snipes_AL |
 | [projectID](pages/project.md) | string | R | Unique identifier for a project. | LU_geolocator_great_snipes_AL |
-| datasetName | string | R | A descriptive name for the data set. | Great snipe geolocation by light tracking |
+| datasetTitle | string | R | A descriptive name for the data set. | Great snipe geolocation by light tracking |
 | datasetDescription | text | r | A brief overview of the dataset: a descriptive abstract providing enough information to help understand the content of the dataset. <br>Include what (taxon), why (purpose), where (geographic area), when and how (including the sensor system/s chosen). | Tracking logger data from Great snipes breeding in Jämtland |
 | animalCount | integer | o | Number of animals included in dataset. | 63 |
 | Creator | array of contacts | R | The contact of the creator(-s) for the dataset, i.e. the people or organizations who initiated data collection and created this resource. | (see Contact object) |
