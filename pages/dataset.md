@@ -16,7 +16,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | Curator | contact | o | The contact of the of the curator for the dataset, i.e. the person who is managing the dataset, that is maintaining the data set so it can be accessed and used by people looking for information. | (see Contact object) |
 | Owner | contact | R |  | The contact of of the owner for the dataset, i.e. the person or organization possessing the Intellectual Property Rights of the dataset (who can decide about terms of use or grant/deny use of dataset). |
 | License | string | R | The license applied to the dataset, i.e. the legal arrangement specifying what users can do with the data. | CC-BY-NC |
-| datasetCitation | string |  | Preferred way or default way for how to cite the dataset. |  |
+| Citation | string | r | Preferred way or default way for how to cite the dataset. | Lindström Å, LastName F, LastName A B (2022). Great snipe geolocation by light tracking. Version 1.X. Lund University. Biologging dataset https://doi.org/10.1xxxxx accessed via yyyyy on 2023-11-30. |
 | datasetReferences | array of strings |  | List of DOI for the dataset |  |
 | sensorTypes | array of strings | x | List of sensor types used in this dataset. | Acceleration, Altimeter, Temperature, GeolocationByLight |
 | datasetTaxon | array of Taxons | x |  |  |
