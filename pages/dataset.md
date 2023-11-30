@@ -19,12 +19,13 @@ Req = requirement: R = required, r = recommended, o = optional.
 | citation | string | r | Preferred way or default way for how to cite the dataset. | Lindström Å, LastName F, LastName A B (2022). Great snipe geolocation by light tracking. Version 1.X. Lund University. Biologging dataset https://doi.org/10.1xxxxx accessed via yyyyy on 2023-11-30. |
 | onlineUrl | string | o | URL of dataset (if any). |  |
 | bibliographicCitation | string | o | One or more DOI's for the citation(-s) of an external resource or additional publication related to or used in the creation of this resource, that serves as an important additional reference for a dataset (e.g. a data paper that describes the dataset, or a paper that is intended to be the canonical or examplar reference to the dataset) (if any). |  |
-| sensorTypes | array of strings | x | List of sensor types used in this dataset. | Acceleration, Altimeter, Temperature, GeolocationByLight |
-| datasetTaxon | array of Taxons | x |  |  |
-| embargoEndDate | date |  | Date when embargo on open access ends (if any) | 2030-01-01 |
-| isPublic | boolean |  | Indicator of whether the dataset is free to use. | true |
-| updateFrequency | string |  |  | The frequency with which changes are made to the dataset after the initial dataset has been published. Values, e.g.: daily, monthly, unknown, three times per month, three times per year, every other month, weekly, yearly, other. |
-| geographicalCoverage | GeographicWENS |  |  |  |
+| sensorTypes | array of strings | R | List of sensor types used in this dataset. | Acceleration, Altimeter, Temperature, GeolocationByLight |
+| taxonomicCoverage | array of Taxon | R |  | (see Taxon object) |
+| embargoEndDate | date | o | Date when embargo on open access ends (if any). | 2030-01-01 |
+| isPublic | boolean | o | Indicator of whether the dataset is free to use. | true |
+| updateFrequency | string | o | The frequency with which changes are made to the dataset after the initial dataset has been published. Values, e.g.: daily, monthly, weekly, annually, biannually, irregular, asNeeded, unknown. | asNeeded |
+| geographicCoverage | GeographicWENS | o | Spatial information about ata dataset. | (see GeographicWENS object) |
+
 | startDate | datetime | x | The start date of the time period within which the observations were collected. | 2009-05-21T12:00:00Z |
 | endDate | datetime |  | The end date of the time period within which the observations were collected. NULL when data collection is ongoing. | 2021-12-31T12:00:00Z |
 | samplingDescription | string |  | A description of what sampling methods and procedures are or have been used in the research project. The description can be augmented by the listing of names or references to methods or sampling procedures using the field samplingMethods. When applicable, specify whether physical measurements (e.g. length, mass, etc.) of organisms were taken. When applicable describe the type(s) of individuals included or excluded when sampling due to developmental stage (e.g. adult, reproductive, larval), and size classes included or excluded (e.g. only small mammals). |  |
@@ -33,8 +34,6 @@ Req = requirement: R = required, r = recommended, o = optional.
 | relationType | string |  | If RelatedIdentifier is used, relationType is mandatory. Use from vocabulary: Cites, IsCitedBy, IsSupplementedBy, IsSupplementTo, Describes, IsDescribedBy, IsVersionOf, HasVersion, IsPartOf, HasPart. |  |
 | version | string |  | The version number of the resource. Suggested practice: track major_version.minor_version. Register a new identifier for a major version change. |  |
 | sensitiveData | string |  | Specifies whether data contain protected information, i.e. data contain information that is protected by legislation, e.g. the Species Protection Ordinance. Sensitive data may also apply to information contained in data of records of protected species, disclosure of which may lead to risks for the species. |  |
-
-
 | dateCreated | date | x | The date when the first version of the dataset was published. (date generated at time of publication) |  |
 | dateUpdated | date | x | The date when the dataset was updated. (date generated at time of data update) |  |
 ** to be finished**
