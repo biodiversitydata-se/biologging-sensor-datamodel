@@ -1,21 +1,21 @@
 ## Dataset
 
-kkkahhaf
+Dataset: A set of data sharing (all or most) properties and that can be described by the same metadata.
 
-Req = required. If nothing indicated : optional
+Req = requirement: R = required, r = recommended, o = optional.
 
 | Field name | Format | Req | Description | Example |
 | ---------- | ------ | --- | ----------- | ------- |
-| datasetID | string | x |  | Unique identifier for a dataset. Recommended format: ... (should be the GBIF dataset DOI) |
-| [projectID](pages/project.md) | string | x | Unique identifier for a project. Recommended format: ... |  |
-| datasetName | string | x | A descriptive name for the data set. |  |
-| datasetDescription | text | x | A brief overview of the dataset: a descriptive abstract providing enough information to help understand the content of the dataset. Include what (taxon), why (purpose), where (geographic area), when and how (including the sensor system/s chosen). |  |
-| animalCount | integer |  | Number of animals included in dataset |  |
-| contactCreators | array of contacts | x | The contact of the creators (who initiated data collection) for the dataset or project. |  |
-| contactQuestions | contact |  | The contact of the person who can answer questions about the dataset in general, or point to others that can |  |
-| contactCuratorOwner | array of contacts |  | The contact of the person who can decide about terms of use or grant/deny use of dataset |  |
-| datasetLicense | string | x | Enum of specific licence type | CC-BY-NC |
-| datasetOwner | Contact | x |  | Who owns the Intellectual Property Rights of the dataset). |
+| datasetID | string | R |  Unique identifier for a dataset. Recommended format: ... (should be the GBIF dataset DOI) | geolocator_great_snipes_AL |
+| [projectID](pages/project.md) | string | R | Unique identifier for a project. | LU_geolocator_great_snipes_AL |
+| datasetName | string | R | A descriptive name for the data set. | Great snipe geolocation by light tracking |
+| datasetDescription | text | r | A brief overview of the dataset: a descriptive abstract providing enough information to help understand the content of the dataset. <br>Include what (taxon), why (purpose), where (geographic area), when and how (including the sensor system/s chosen). | Tracking logger data from Great snipes breeding in Jämtland |
+| animalCount | integer | o | Number of animals included in dataset. | 63 |
+| Creator | array of contacts | R | The contact of the creator(-s) for the dataset, i.e. the people or organizations who initiated data collection and created this resource. | (see Contact object) |
+| Contact | contact | R | The contact for the dataset, i.e. the person to be contacted about this resource (who can answerquestions about the dataset in general, or point to others that can). | (see Contact object) |
+| Curator | contact | o | The contact of the of the curator for the dataset, i.e. the person who is managing the dataset, that is maintaining the data set so it can be accessed and used by people looking for information. | (see Contact object) |
+| Owner | contact | R |  | The contact of of the owner for the dataset, i.e. the person or organization possessing the Intellectual Property Rights of the dataset (who can decide about terms of use or grant/deny use of dataset). |
+| License | string | R | The license applied to the dataset, i.e. the legal arrangement specifying what users can do with the data. | CC-BY-NC |
 | datasetCitation | string |  | Preferred way or default way for how to cite the dataset. |  |
 | datasetReferences | array of strings |  | List of DOI for the dataset |  |
 | sensorTypes | array of strings | x | List of sensor types used in this dataset. | Acceleration, Altimeter, Temperature, GeolocationByLight |
@@ -41,10 +41,10 @@ Req = required. If nothing indicated : optional
 ### Contact object
 | Field name | Format | Req | Description | Example |
 | ---------- | ------ | --- | ----------- | ------- |
-| firstName | string | x |  | Åke |
-| lastName | string | x |  | Lindström |
-| email | string | x |  | ake.lindstrom@biol.lu.se |
-| ORCID | string | x |  | 0000-0002-5597-6209 |
+| firstName | string | R | The first or given name. | Åke |
+| lastName | string | R | The last or family name | Lindström |
+| emailAddress | string | R | The email address. | ake.lindstrom@biol.lu.se |
+| userId | string | o | An identifier that links to a directory of individuals. For example, personal: ORCID Id; organisational: ROR ID | 0000-0002-5597-6209 |
 
 ### Taxon object
 | Field name | Format | Req | Description | Example |
