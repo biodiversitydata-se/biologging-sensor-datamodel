@@ -1,5 +1,5 @@
 # biologging-datamodel
-Data model documentation - describes the entities (objects) of the data model and their properties. The data objects are described by a data dictionary, listing each objects’s properties (fields), with their name and a description. 
+Data model documentation - describes the components (objects) of the data model and their properties. The data objects are described by a data dictionary, listing each objects’s properties (fields), with their name and a description. 
 A Data Dictionary is a collection of names, definitions, and attributes about data objects that are being used or captured in a database, information system, or part of a research project.
 
 ## Data model used in the [SBDI biologging API](https://github.com/biodiversitydata-se/sensorprojectAPI) and client
