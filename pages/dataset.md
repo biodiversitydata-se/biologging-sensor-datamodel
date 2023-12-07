@@ -10,7 +10,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | [projectID](pages/project.md) | string | R | Unique identifier for a project. | LU_geolocator_great_snipes_AL |
 | datasetTitle | string | R | A descriptive name for the data set. | Great snipe geolocation by light tracking |
 | datasetDescription | text | r | A brief overview of the dataset: a descriptive abstract providing enough information to help understand the content of the dataset. <br>Include what (taxon), why (purpose), where (geographic area), when and how (including the sensor system/s chosen). | Migration tracking logger data from Great snipes breeding in Jämtland. |
-| animalCount | integer | o | Number of animals included in the dataset. | 63 |
+| individualCount | integer | o | Number of individual organims (animals) included in the dataset. | 63 |
 | creator | array of contacts | R | The contact of the creator(-s) for the dataset, i.e. the people or organizations who initiated data collection and created this resource. | (see Contact object) |
 | contact | array of contacts | R | The contact for the dataset, i.e. the person to be contacted about this resource (who can answerquestions about the dataset in general, or point to others that can). | (see Contact object) |
 | curator | array of contacts | o | The contact of the of the curator for the dataset, i.e. the person who is managing the dataset, that is maintaining the data set so it can be accessed and used by people looking for information. | (see Contact object) |
