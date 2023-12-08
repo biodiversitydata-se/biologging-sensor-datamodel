@@ -10,7 +10,7 @@ A Data Dictionary is a collection of names, definitions, and attributes about da
  - [Dataset](pages/dataset.md)
  - Deployment / Event
  - Record
- - [Instrument](pages/instrument.md)
+ - [Instrument](pages/instrument.md) / Device
  - Organism
 
 ### Data model
