@@ -4,8 +4,8 @@ A (research) project providing the context under which the data in the dataset w
 
 Req = requirement: R = required, r = recommended, o = optional.
 
-| Field name | Format | Req | Description | Example |
-| ---------- | ------ | --- | ----------- | ------- |
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
 | projectID | string | R | Unique identifier for a project. | LU_geolocator_great_snipes_AL |
 | projectName | string | R | A descriptive name for the project. | Geolocator Great snipes Jämtland ÅL |
 | projectDescription | text | r | A brief overview of the project: a descriptive abstract providing enough information to help understand <br>the purpose of the project, and the datasets it contains. Include what, why, where, when and how. | ... |

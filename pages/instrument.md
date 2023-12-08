@@ -2,8 +2,8 @@
 
 Req = required. If nothing indicated : optional
 
-| Field name | Format | Req | Description | Example |
-| ---------- | ------ | --- | ----------- | ------- |
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
 | instrumentType | enum | x | Type of instrument among a predefined list | GPS Collar |
 | instrumentModel | string | x | Name of the model of the instrument |  |
 | instrumentManufacturer | string | x | Manufacturer of the instrument | |
@@ -15,8 +15,8 @@ Req = required. If nothing indicated : optional
 ### Sensor object
 
 
-| Field name | Format | Req | Description | Example |
-| ---------- | ------ | --- | ----------- | ------- |
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
 | sensorID | string | x |  |  |
 | sensorType | string | x |  |  |
 | valuesMeasured | string | x |  |  |
