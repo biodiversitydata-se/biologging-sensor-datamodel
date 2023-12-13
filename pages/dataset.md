@@ -21,6 +21,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | onlineUrl | string | o | URL of dataset (if any). |  |
 | bibliographicCitation | array of references | o | One or more DOI's for the citation(-s) of an external resource or additional publication related to or used in the creation of this resource, that serves as an important additional reference for a dataset (e.g. a data paper that describes the dataset, or a paper that is intended to be the canonical or examplar reference to the dataset) (if any). |  |
 | sensorTypes | array of strings | R | List of sensor types used in this dataset. | Acceleration, Altimeter, Temperature, GeolocationByLight |
+| instrumentTypes | array of strings | R | List of instrument types used in this dataset. | Multi-sensor archival datalogger, GPS Collar |
 | taxonomicCoverage | array of Taxon | R |  | (see Taxon object) |
 | embargoEndDate | date | o | Date when embargo on open access ends (if any). | 2030-01-01 |
 | isPublic | boolean | o | Indicator of whether the dataset is free to use. | true |
