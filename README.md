@@ -8,8 +8,8 @@ A Data Dictionary is a collection of names, definitions, and attributes about da
 
  - [Project](pages/project.md)
  - [Dataset](pages/dataset.md)
- - Deployment / Event
- - Record
+ - [Deployment / Event](pages/event.md)
+ - [Record](pages/record.md)
  - [Instrument](pages/instrument.md) / Device
  - Organism
 
