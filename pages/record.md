@@ -14,3 +14,10 @@ Req = requirement: R = required, r = recommended, o = optional.
 | recordValues | array of keyValue | R | Array containing all the values mesured for this record. THe key must be in the same order as in the instrument.sensor.valuesMeasured | |
 | dateCreated | date | R | The date when the first version of the record was published. (date generated at time of publication) |  |
 | dateUpdated | date | R | The date when the record was last updated. (date generated at time of data update) |  |
+
+
+### KeyValue object
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
+| key | string | R | Identifier of the key | | |
+| value | string | R | Value measured | | |
