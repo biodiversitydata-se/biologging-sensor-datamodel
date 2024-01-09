@@ -1,6 +1,6 @@
 ## Event
 
-Definition of event (device deployment): An action that occurs at some location during some time, here typically referring to the deployment of a tag (device) on an organism. Event (deployment) information includes information about the organism tagged, tagging protocols followed and tag settings, providing essential information and context for the data collected during the event. May also refer to other event types, for example the handling of the organism.
+Event (device deployment): An action that occurs at some location during some time, here typically referring to the deployment of a tag (device) on an organism. Event (deployment) information includes information about the organism tagged, tagging protocols followed and tag settings, providing essential information and context for the data collected during the event. May also refer to other event types, for example the handling of the organism.
 
 Req = requirement: R = required, r = recommended, o = optional.
 
