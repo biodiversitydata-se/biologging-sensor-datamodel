@@ -7,7 +7,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | recordID | string | R | Unique identifier for a record | | |
-| sensorID | string | R | Identifier of the sensor that recorded the data |  | |
+| instrumentID | string | R | Identifier of the instrument that recorded the data |  | |
 | eventID | string | R | Identifier of the event |  | |
 | datasetID | string | R | Identifier of the dataset |  | |
 | recordTime | datetime | R | The recording date and time. | 2009-05-21T12:00:00Z | |
