@@ -27,7 +27,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | isPublic | boolean | o | Indicator of whether the dataset is free to use. | true |
 | updateFrequency | string | o | The frequency with which changes are made to the dataset after the initial dataset has been published. Values, e.g.: daily, monthly, weekly, annually, biannually, irregular, asNeeded, unknown. | asNeeded |
 | geographicCoverage | GeographicWENS | R | Spatial information about the dataset. | (see GeographicWENS object) |
-| temporalCoverage| array of RangeDate| R | Information about dates or date ranges covered by the resource. Coverages may refer to the times during which the collection or data set was assembled. | (see RangeDate object) |
+| temporalCoverage| array of RangeDatetime | R | Information about dates or date ranges covered by the resource. Coverages may refer to the times during which the collection or data set was assembled. | (see RangeDatetime object) |
 | samplingDescription | string | o | A description of what sampling methods and procedures are or have been used to collect the data represented in the dataset. The description can be augmented by the listing of names or references to methods or sampling procedures. When applicable, specify whether physical measurements (e.g. length, mass, etc.) of organisms were taken. When applicable describe the type(s) of individuals included or excluded when sampling due to developmental stage (e.g. adult, reproductive, larval), and size classes included or excluded (e.g. only small mammals). |  |
 | qualityControl | string | o | Information on possible errors or on the quality of a data set: Description of actions taken to either control or assess the quality of data. A quality control description should identify a quality goal and describe prescriptive steps taken to ensure that the data meet those standards and/or postscriptive steps taken to assess the extent to which they are met. Description may refer to instrumentation or software used, and include a reference to a protocol. |  |
 | relatedIdentifier | string | o | Identifiers of related resources (e.g. relate to subsets, or a species list). These must be globally unique identifiers. |  |
@@ -61,11 +61,11 @@ Req = requirement: R = required, r = recommended, o = optional.
 | southBoundCoordinate | string | R | Southern longitudinal dimension of the bounding box. In decimal degrees, with the standard limiting values of -90 to +90 latitude (South/North) and -180 to +180 longitude (West/East). | 61.6859 |
 | geographicalDescription | string | o | Textual description of the geographic coverage (geographic scope), i.e. the spatial region or named place where the data was gathered or about which the data is focused. |  |
 
-### RangeDate object
+### RangeDatetime object
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
-| startDate | datetime | R | The start date of the time period within which the observations were collected. | 2009-05-21T12:00:00Z | |
-| endDate | datetime | o | The end date of the time period within which the observations were collected. NULL when data collection is ongoing. | 2021-12-31T12:00:00Z | |
+| startDatetime | datetime | R | The start date of the time period within which the observations were collected. | 2009-05-21T12:00:00Z | |
+| endDatetime | datetime | o | The end date of the time period within which the observations were collected. NULL when data collection is ongoing. | 2021-12-31T12:00:00Z | |
 
 ### Reference object
 | Field name | Format | Req | Definition | Example | Reference |

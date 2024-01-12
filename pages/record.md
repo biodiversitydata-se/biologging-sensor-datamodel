@@ -10,7 +10,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | instrumentID | string | R | Identifier of the instrument that recorded the data |  | |
 | eventID | string | R | Identifier of the event |  | |
 | datasetID | string | R | Identifier of the dataset |  | |
-| recordTime | datetime | R | The recording date and time. | 2009-05-21T12:00:00Z | |
+| recordTime | array of RangeDatetime | R | The recording date and time, as described in the [dataset object]pages/dataset.md. Could be only one date, or a range of 2. | {"startDatetime": "2009-05-21T12:00:00Z", "endDate": "2021-12-31T12:00:00Z"} | |
 | recordValues | array of keyValue | R | Array containing all the values measured for this record, provided as key:value pair. The key must be in the same order as in the instrument.sensor.valuesMeasured | {"distance" : "2981", "azimuth" : "79.24", "elevation" : "3.51"} | (see KeyValue object) |
 | dateCreated | date | R | The date when the first version of the record was published. (date generated at time of publication) |  |
 | dateUpdated | date | R | The date when the record was last updated. (date generated at time of data update) |  |
