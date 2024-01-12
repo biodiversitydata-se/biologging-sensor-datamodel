@@ -23,7 +23,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | sensorID | string | R |  |  |
 | sensorType | string | R |  |  |
 | sensorManufacturer | string | R |  |  |
-| valuesMeasured | string | R |  |  |
+| valuesMeasured | string | R | Attribute name of the values measured, as it will be mentionned in the record.recordValues.key |  |
 | unitsReported | string | R | Unit of measurement reported. | degrees C | [https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/unitsReported.md] |
 | sensorPrecision | string | R |  |  |
 | range | string | R |  |  |
