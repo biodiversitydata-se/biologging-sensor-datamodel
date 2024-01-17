@@ -22,3 +22,14 @@ Req = requirement: R = required, r = recommended, o = optional.
 | eventTaxon | array of Taxon | R |  | (see [Taxon object](dataset.md)) |
 | dateCreated | date | R | The date when the first version of the event was published. (date generated at time of publication) |  |
 | dateUpdated | date | R | The date when the event was last updated. (date generated at time of data update) |  |
+
+
+### Vocabulary
+
+#### eventType
+| Value name | Definition |
+| ---------- | ------ |
+| organismCapture |  |
+| deployment | the action of a device (collecting or observation equipment) collecting observations |
+|  |  |
+|  |  |
