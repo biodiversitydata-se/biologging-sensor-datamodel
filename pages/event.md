@@ -1,6 +1,8 @@
 ## Event
 
-Event : An action that occurs at some location during some time, could refer to the deployment of a device or the recording of observations. Event (deployment) information includes information about the organism tagged, tagging protocols followed and tag settings, providing essential information and context for the data collected during the event. May also refer to other event types, for example the handling of the organism.
+Event: An action that occurs at some location during some time. Within biologging an action can be, for example, the capture of an organims for tagging, the deployment of a device (a collecting or observation equipment), or the recording of observations. Event information includes information relevant to the type of the event, for example, about the organism tagged, tagging protocols followed and tag settings, providing essential information and context for the data collected during the event.
+
+This can be a hierarchy of events, for example a sequence of measurements event has parentEvent deployment. See also [Darwin Core terms for event](https://dwc.tdwg.org/terms/#event) and [GBIF sampling-ecent data - How to capture hierarchy of events?](https://ipt.gbif.org/manual/en/ipt/latest/best-practices-sampling-event-data#how-to-capture-hierarchy-of-events)
 
 Req = requirement: R = required, r = recommended, o = optional.
 
@@ -11,7 +13,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | organismID | string | R | Unique identifier for an individual, link data from different deployments or instruments on the same organism. |  | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/organismID.md) |
 | instrumentID | string | R | Identifier to the instrument |  |  |
 | instrumentSettings | array of string | o | Settings used for the instrument during this event. | Sample rate set to every hour |  |
-| eventType | string | R | The type of the event (from a list of available values). | handling | [DwC](https://dwc.tdwg.org/terms/#dwc:eventType) |
+| eventType | string | R | The type of the event. Using a controlled vocabulary, examples include organismCapture, deployment. | deployment | [DwC](https://dwc.tdwg.org/terms/#dwc:eventType) |
 | eventStart | datetime | R | Timestamp the instrument was deployed on the organism. Provides the start of the time period within which the observations were collected. | 2009-05-21T12:00:00Z | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/deploymentDateTime.md) | 
 | eventEnd | datetime | o | Timestamp the instrument was recovered or otherwise detached from the organism (if known). Provides the end of the time period within which the observations were collected. NULL when data collection is ongoing. | 2021-12-31T12:00:00Z | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/detachmentDateTime.md) |
 | qualityRemarks | string | r | Comments or notes about the quality of the data recorded for this event. |  |  |
