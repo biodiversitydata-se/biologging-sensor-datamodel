@@ -21,4 +21,6 @@ Description of data model: A project comprises one or more datasets. Each datase
 
 Basis for this work on [A standardisation framework for bio-logging data](https://github.com/ocean-tracking-network/biologging_standardization/tree/master), published Sequeira et al. 2021 A standardisation framework for bio-logging data to advance ecological research and conservation. Methods in Ecology and Evolution 12, 996-1007  [https://doi.org/10.1111/2041-210X.13593]( https://doi.org/10.1111/2041-210X.13593).
 
+Similarities exist between biologging data and camera trap data, see work on developing a data model for camera trap data in progress [here](https://docs.google.com/document/d/1DkrjaAyabHc1zqvcJxivTiHp45jQOmGfE4beAtVsUi8/edit#heading=h.avhlbhurvh3v).
+
 * this repo is now linked to our Slack channel
