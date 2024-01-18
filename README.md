@@ -25,4 +25,12 @@ Similarities exist between biologging data and camera trap data, see work on dev
 
 Metadata at dataset level is based on the [GBIF metadata profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile), based itself primarily on the [Ecological Metadata Language (EML)](https://sbclter.msi.ucsb.edu/external/InformationManagement/EML_211_schema/docs/eml-2.1.1/index.html), and the [DataCite Metadata Schema](https://schema.datacite.org/meta/kernel-4.4/).
 
+
+
+### Repository
+
 * this repo is now linked to our Slack channel
+
+### License
+
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0)
