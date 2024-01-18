@@ -15,7 +15,7 @@ A Data Dictionary is a collection of names, definitions, and attributes about da
 
 ### Data model
 
-PICTURE. illustration of data model. placeholder
+PICTURE - placeholder. illustration of data model
 
 Description of data model: A project comprises one or more datasets. Each dataset contains a core of events (deployments) defining the location and duration of an event and additional event properties. The event core is extended by information about the organism that is acting during the event, one or more instruments used during the event, one or more sensors used during the event, extended measurements or facts linked to the event (deployment), and the data records collected during the event.
 
@@ -26,7 +26,7 @@ Similarities exist between biologging data and camera trap data, see work on dev
 Metadata at dataset level is based on the [GBIF metadata profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile), based itself primarily on the [Ecological Metadata Language (EML)](https://sbclter.msi.ucsb.edu/external/InformationManagement/EML_211_schema/docs/eml-2.1.1/index.html), and the [DataCite Metadata Schema](https://schema.datacite.org/meta/kernel-4.4/).
 
 
-
+## 
 ### Repository
 
 * this repo is now linked to our Slack channel
