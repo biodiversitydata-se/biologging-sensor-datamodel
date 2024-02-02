@@ -1,5 +1,7 @@
 # biologging-datamodel
-Data model documentation - describes the components (objects) of the data model and their properties. The data objects are described by a data dictionary, listing each objects’s properties (fields), with their name and a description. 
+Biologging data is data collected from wild animals employing animal-attached electronic tags to uncover the hidden lives of wild animals. In the simplest case, the data is a time-series of positions, recording the movement of animals. Other more sophisticated sensor systems attached to the animals can collect information on the physiological status of the animal (heart rate, temperature, etc.), behaviour patterns (e.g. activity level or flight altitude) and other parameters of interest. Data is collected by tags (syn. with instrument, device) including sensors and retrieved or remotely transmitted, or collected from radar/optical sensors that target animals. 
+
+This data model documentation describes the components (objects) of the data model and their properties. The data objects are described by a data dictionary, listing each objects’s properties (fields), with their name and a description. 
 A Data Dictionary is a collection of names, definitions, and attributes about data objects that are being used or captured in a database, information system, or part of a research project.
 
 ## Data model used in the [SBDI biologging API](https://github.com/biodiversitydata-se/sensorprojectAPI) and client
