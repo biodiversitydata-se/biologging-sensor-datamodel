@@ -14,3 +14,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | isFinalized | boolean | R | Indicates whether project is ongoing or ended. Default value is FALSE. TRUE if project has been ended. | FALSE |
 | createdDate | string | r | The date when project metadata was created. | 2009-11-29 |
 | updatedDate | string | r | The date when project metadata was updated. | 2022-11-01 |
+
+<br>
+Note - To be investigated: <br> Project may be defined at a level above dataset (i.e. a project under which data in one or more datasets were produced) and also (?) at a level below dataset (i.e. delimit data parts that were produced, for example, 
+in a specific area, population and/or time period).
