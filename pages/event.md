@@ -18,7 +18,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | eventEnd | datetime | o | Timestamp for the end of the event. Provides the end of the time period within which the observations were collected. NULL when data collection is ongoing. | 2021-12-31T12:00:00Z | [DwC](https://dwc.tdwg.org/terms/#dwc:eventTime), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/detachmentDateTime.md) |
 | qualityRemarks | string | r | Comments or notes about the quality of the data recorded for this event. | "data not recorded due to sensor failure"; "data of poor quality"; "no quality issues" |  |
 | eventRemarks | string | o | Comments or notes about the event. |  | [DwC](https://dwc.tdwg.org/terms/#dwc:eventRemarks) |
-| sensorTypes | array of strings | R | List of type(s) of sensor contained in instrument and used during the event. | Acceleration, Altimeter, Temperature, GeolocationByLight | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/sensorType.md)
+| sensorTypes | array of strings | R | List of type(s) of sensor contained in instrument and used during the event. | Acceleration, Altitude, Temperature, GeolocationByLight | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/sensorType.md)
 | eventTaxon | array of Taxon | R |  | (see [Taxon object](dataset.md)) |
 | dateCreated | date | R | The date when the first version of the event was published. (date generated at time of publication) |  |
 | dateUpdated | date | R | The date when the event was last updated. (date generated at time of data update) |  |
