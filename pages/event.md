@@ -20,6 +20,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | eventRemarks | string | o | Comments or notes about the event. |  | [DwC](https://dwc.tdwg.org/terms/#dwc:eventRemarks) |
 | sensorTypes | array of strings | R | List of type(s) of sensor contained in instrument and used during the event. | Acceleration, Altitude, Temperature, GeolocationByLight | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/sensorType.md)
 | eventTaxon | array of Taxon | R |  | (see [Taxon object](dataset.md)) |
+| numberOfRecords | integer | o | Calculated field that stores the number of records in the database for this event. | 123456789 |
 | dateCreated | date | R | The date when the first version of the event was published. (date generated at time of publication) |  |
 | dateUpdated | date | R | The date when the event was last updated. (date generated at time of data update) |  |
 
