@@ -51,9 +51,12 @@ Req = requirement: R = required, r = recommended, o = optional.
 ### Taxon object
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
-| guid | string | r | Id of a taxon covered by the dataset. | urn:lsid:dyntaxa.se:Taxon:100061 |
-| scientificName | string | R |  | Gallinago media |
-| commonName | string | o |  | Great snipe |
+| taxonListSourceUrl | string | R | Link to the species list where the item comes from. SBDI module species.biodiversitydata.se  | https://collections.biodiversitydata.se/public/show/7ddf754f-d193-4cc9-b351-99906754a03b | [Species API](https://species.biodiversitydata.se/ws/openapi#/Search)
+| taxonListSourceName | string | R | Name of the species where the item comes from. | "GBIF Backbone Taxonomy" |
+| taxonGuid | string | R | Id of the species in the SBDI species module | 2481831 |
+| taxonScientificName | string | R | ScientificName of the species | Great snipe |
+| taxonCommonName | string | R | Common name displayed | Great snipe |
+| dyntaxaId | string | R | DYntaxaId of the species | 100061 |
 
 ### GeographicWENS object
 | Field name | Format | Req | Definition | Example | Reference |
