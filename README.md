@@ -13,6 +13,7 @@ A Data Dictionary is a collection of names, definitions, and attributes about da
  - [Event](pages/event.md)
  - [Record](pages/record.md)
  - [Instrument](pages/instrument.md) (including the Sensor object)
+ - [Taxon](pages/taxon.md)
  - Organism
 
 ### Data model

@@ -22,7 +22,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | bibliographicCitation | array of references | o | One or more DOI's for the citation(-s) of an external resource or additional publication related to or used in the creation of this resource, that serves as an important additional reference for a dataset (e.g. a data paper that describes the dataset, or a paper that is intended to be the canonical or examplar reference to the dataset) (if any). |  | [GBIF metadata profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#additional-metadata-natural-collections-description-data-ncd-related)
 | valuesMeasured | array of strings | R | List of values measured by the different sensors and instruments used in this dataset. | activity, altitude, temperature, pressure | *We need a list here !* |
 | instrumentTypes | array of strings | R | List of instrument types used in this dataset. | Multi-sensor archival datalogger, GPS Collar | [Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentType.md) |
-| taxonomicCoverage | array of Taxon | R |  | [GBIF metadata profile: taxonomicClassification](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#taxonomic-coverage) (see Taxon object) |
+| taxonomicCoverage | array of [Taxon](pages/taxon.md) | R |  | [GBIF metadata profile: taxonomicClassification](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#taxonomic-coverage) (see Taxon object) |
 | embargoEndDate | date | o | Date when embargo on open access ends (if any). | 2030-01-01 | [DataCite schema: Available](https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf) |
 | isPublic | boolean | o | Indicator of whether the dataset is free to use. | true | . |
 | updateFrequency | string | o | The frequency with which changes are made to the dataset after the initial dataset has been published. Values, e.g.: daily, monthly, weekly, annually, biannually, irregular, asNeeded, unknown. | asNeeded |
@@ -48,16 +48,6 @@ Req = requirement: R = required, r = recommended, o = optional.
 | userId | string | o | An identifier that links to a directory of individuals. For example, personal: ORCID Id; organisational: ROR ID | 0000-0002-5597-6209 |
 | webpage | url | o | A permanent link to the contact person | |
 
-### Taxon object
-| Field name | Format | Req | Definition | Example | Reference |
-| ---------- | ------ | --- | ---------- | ------- | --------- |
-| taxonListSourceUrl | string | R | Link to the species list where the item comes from. SBDI module species.biodiversitydata.se  | https://collections.biodiversitydata.se/public/show/7ddf754f-d193-4cc9-b351-99906754a03b | [Species API](https://species.biodiversitydata.se/ws/openapi#/Search)
-| taxonListSourceName | string | R | Name of the species where the item comes from. | "GBIF Backbone Taxonomy" |
-| taxonGuid | string | R | Id of the species in the SBDI species module | 2481831 |
-| taxonScientificName | string | R | ScientificName of the species | Great snipe |
-| taxonCommonName | string | R | Common name displayed | Great snipe |
-| dyntaxaId | string | R | DyntaxaId of the species as specified in artfakta.se | 100061 |
-
 ### GeographicWENS object
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
@@ -76,6 +66,6 @@ Req = requirement: R = required, r = recommended, o = optional.
 ### Reference object
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
-| DOI | string | r | DOI |  |  |
-| url | string | o | Url |  |  |
-| Definition | string | o | Url |  |  |
+| Title | string | R | Title of the reference |  |
+| DOI | string | r | DOI of the reference |  |
+| url | string | R | Url of the reference |  |

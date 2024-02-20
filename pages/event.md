@@ -19,7 +19,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | qualityRemarks | string | r | Comments or notes about the quality of the data recorded for this event. | "data not recorded due to sensor failure"; "data of poor quality"; "no quality issues" |  |
 | eventRemarks | string | o | Comments or notes about the event. |  | [DwC](https://dwc.tdwg.org/terms/#dwc:eventRemarks) |
 | valuesMeasured | array of strings | R | List of values measured by the different sensors and instruments used in this event. | activity, altitude, temperature, pressure | *We need a list here !* |
-| eventTaxon | array of Taxon | R |  | (see [Taxon object](dataset.md)) |
+| eventTaxon | array of [Taxon](pages/taxon.md) | R |  | (see [Taxon object](dataset.md)) |
 | numberOfRecords | integer | o | Calculated field that stores the number of records in the database for this event. | 123456789 |
 | dateCreated | date | R | The date when the first version of the event was published. (date generated at time of publication) |  |
 | dateUpdated | date | R | The date when the event was last updated. (date generated at time of data update) |  |
