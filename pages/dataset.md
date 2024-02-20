@@ -56,7 +56,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | taxonGuid | string | R | Id of the species in the SBDI species module | 2481831 |
 | taxonScientificName | string | R | ScientificName of the species | Great snipe |
 | taxonCommonName | string | R | Common name displayed | Great snipe |
-| dyntaxaId | string | R | DYntaxaId of the species | 100061 |
+| dyntaxaId | string | R | DyntaxaId of the species as specified in artfakta.se | 100061 |
 
 ### GeographicWENS object
 | Field name | Format | Req | Definition | Example | Reference |
