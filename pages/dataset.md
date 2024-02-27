@@ -68,4 +68,3 @@ Req = requirement: R = required, r = recommended, o = optional.
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | Title | string | R | Title of the reference |  |
 | DOI | string | r | DOI of the reference |  |
-| url | string | R | Url of the reference |  |
