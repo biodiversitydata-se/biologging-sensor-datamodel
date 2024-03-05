@@ -7,6 +7,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | instrumentID |  | R | Unique identifier of the instrument. Can be the instrument serial number, or other similar identification system used by the manufacturer. |  | [https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentID.md] |
+| projectID | string | R | The project this instrument belongs to | LU_geolocator_great_snipes_AL |
 | instrumentType | enum | R | Type of instrument deployed (from a predefined list). | GPS Collar | [https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentType.md] |
 | instrumentModel | string | R | Name of specific instrument model deployed. |  | [https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentModel.md] |
 | instrumentManufacturer | string | R | Manufacturer of the instrument. | Vectronic Aerospace | [https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentManufacturer.md] |
