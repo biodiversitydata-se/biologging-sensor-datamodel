@@ -31,3 +31,27 @@ Req = requirement: R = required, r = recommended, o = optional.
 | settings | string | o |  |  |
 | calibrationDate | string | r |  |  |
 | calibrationDetails | string | r |  |  |
+
+
+### Vocabulary
+
+#### instrumentType
+| Value name | Definition |
+| ---------- | ------ |
+| GPStag | device (tag) containing a GPS sensor, can be a collar, backpack or other. |
+| geolocator |  (tag) that containing a sensor that records records ambient light level to determine location. may contain additional sensors. |
+| PIT | Passive Integrated Transponder |
+| radar |  |
+|  |  |
+|  |  |
+|  |  |
+
+#### sensorType
+| Value name | Definition |
+| ---------- | ------ |
+| accelerometer |  |
+| GPS |  |
+| thermometer |  |
+| pressureGauge |  |
+|  |  |
+|  |  |
