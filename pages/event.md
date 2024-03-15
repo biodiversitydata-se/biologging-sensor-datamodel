@@ -11,7 +11,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | eventID | string | R | Unique identifier for an event (deployment). | 4e72-825a-5fad-2e0d1e901 | [DwC](https://dwc.tdwg.org/terms/#dwc:eventID), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/deploymentID.md) |
 | datasetID | string | R | Identifier of the dataset |  |  |
 | organismID | string | R | Unique identifier for an individual, link data from different deployments or instruments on the same organism. |  | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/organismID.md) |
-| instrumentID | string | R | Identifier to the instrument |  |  |
+| instrumentID | string | R | Identifier to the instrument. |  |  |
 | instrumentSettings | array of string | o | Settings used for the instrument during this event. (flexible format: can be text, key:value pairs, a reference, or URL, DOI)| Sample rate set to every hour |  |
 | eventType | string | R | The type of the event. Using a controlled vocabulary, examples include organismCapture, deployment. | deployment | [DwC](https://dwc.tdwg.org/terms/#dwc:eventType) |
 | eventStart | datetime | R | Timestamp for the start of the event. Provides the start of the time period within which the observations were collected. | 2009-05-21T12:00:00Z | [DwC](https://dwc.tdwg.org/terms/#dwc:eventTime), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/deploymentDateTime.md) | 
@@ -30,7 +30,8 @@ Req = requirement: R = required, r = recommended, o = optional.
 #### eventType
 | Value name | Definition |
 | ---------- | ------ |
-| organismCapture |  |
-| deployment | the action of a device (collecting or observation equipment) collecting observations |
-|  |  |
-|  |  |
+| organismCapture | capture and release of an organism, typically for the purpose of attaching an instrument (tag), measurements describing the state of the organism or external conditions at the capture event may be taken. |
+| deployment | spans the period of time a sensor is functioning properly in the field on a particular organism or at a particular location, and may follow a specified protocol. for example, instruments (tags) deployed on a moving organism, or instruments (e.g. radar) installed at a location (e.g. radar station). |
+| tracking | is started after the deployment of an instrument on an organism (e.g. continues recording of scheduled recordings of positions or body temperature),  or triggered by an instrument deployed on an organism when a signal is received by a receiver instrument at a specified location (e.g. PIT tags), or triggered at the same location as the deployment covering the field of view of the instrument (e.g. radar). Each tracking event spans a specific time period defining the bounds of the event. 
+Each tracking event consists of one or more records of values measured by the sensor. |
+| deployOff | recapture and/or tag retrieval ending the deployment or after the deployment ended |
