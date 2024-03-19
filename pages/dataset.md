@@ -35,6 +35,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | relationType | string | o | If RelatedIdentifier is used, relationType is mandatory. Use from vocabulary: Cites, IsCitedBy, IsSupplementedBy, IsSupplementTo, Describes, IsDescribedBy, IsVersionOf, HasVersion, IsPartOf, HasPart, HasMetadata. | HasMetadata | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) |
 | version | string | o | The version number of the resource. Suggested practice: track major_version.minor_version. Register a new identifier for a major version change. |  |
 | sensitiveData | boolean | r | Specifies whether data contain protected information, i.e. data contain information that is protected by legislation, e.g. the Species Protection Ordinance. Sensitive data may also apply to information contained in data of records of protected species, disclosure of which may lead to risks for the species. | TRUE |
+| pictureUrl | url | r | Url of a picture that could be used for representing the dataset. | |
 | isFinalized | boolean | R | Indicates whether the dataset is ongoing or ended. TRUE if the dataset has been ended. | FALSE |
 | numberOfRecords | integer | o | Calculated field that stores the number of records in the database for this dataset. | 123456789 |
 | dateCreated | date | R | The date when the first version of the dataset was published. (date generated at time of publication) |  |
