@@ -13,7 +13,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | instrumentManufacturer | string | R |  The company or person that produced the instrument. | Vectronic Aerospace | [https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentManufacturer.md] |
 | instrumentSerialNumber | string | R | Serial number of the instrument. | 09A0178 | [https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentSerialNumber.md] |
 | instrumentCharacteristics | array | R | List of characteristics for an instrument | array("wavelength" => "X-band", "power" => "200 kW", "pulseDuration" => "0.25 microseconds", "pulseRepetition" => "504 Hz", "beamWidth" => "1.5 deg (-3db)") |
-| sensors | array of sensors | R | Specifications for the sensors included in the instrument. | (see sensor object) |
+| sensors | array of sensors | R | Specifications for the sensors included in the instrument. | (see [Sensor object](#sensor-object)) |
 
 
 ### Sensor object
