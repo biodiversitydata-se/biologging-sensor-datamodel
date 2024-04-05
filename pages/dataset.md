@@ -34,7 +34,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 | qualityControl | string | o | Information on possible errors or on the quality of a data set: Description of actions taken to either control or assess the quality of data. A quality control description should identify a quality goal and describe prescriptive steps taken to ensure that the data meet those standards and/or postscriptive steps taken to assess the extent to which they are met. Description may refer to instrumentation or software used, and include a reference to a protocol. |  | [GBIF metadata profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#methods) |
 | relatedIdentifier | string | o | Identifiers of related resources (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank). These must be globally unique identifiers. | 49915781 |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
 | relationType | string | o | If RelatedIdentifier is used, relationType is mandatory. Use from vocabulary: Cites, IsCitedBy, IsSupplementedBy, IsSupplementTo, Describes, IsDescribedBy, IsVersionOf, HasVersion, IsPartOf, HasPart, HasMetadata. | HasMetadata | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) |
-| version | string | o | The version number of the resource. Suggested practice: track major_version.minor_version. Register a new identifier for a major version change. |  |
+| versions | array of [Version](#version-object) | o | The historic of the different versions of the resource. Ordered from the most recent one to the older one. |  |
 | sensitiveData | boolean | r | Specifies whether data contain protected information, i.e. data contain information that is protected by legislation, e.g. the Species Protection Ordinance. Sensitive data may also apply to information contained in data of records of protected species, disclosure of which may lead to risks for the species. | TRUE |
 | pictureUrl | url | r | Url of a picture that can be used for representing the dataset. | |
 | isFinalized | boolean | R | Indicates whether the dataset is ongoing or ended. TRUE if the dataset has been ended. | FALSE |
@@ -71,3 +71,13 @@ Req = requirement: R = required, r = recommended, o = optional.
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | Title | string | R | Title of the reference |  |
 | DOI | string | r | DOI of the reference |  |
+
+### Version object
+
+List the different versions of the dataset. Must be ordered from the most recent to the oldest version. 
+
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
+| Number | string | R | Number of the version. With the format X_Y. X being the major version number, Y the minor version number. | 2.4 | |
+| Date | string | R | Date of the publication of the version |  |  |
+| Log | string | r | Shiort explanation of the changes done for this version |  |  |
