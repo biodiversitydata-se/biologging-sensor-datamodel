@@ -79,5 +79,5 @@ List the different versions of the dataset. Must be ordered from the most recent
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | Number | string | R | Number of the version. With the format X_Y. X being the major version number, Y the minor version number. | 2.4 | |
-| Date | string | R | Date of the publication of the version |  |  |
-| Log | string | r | Shiort explanation of the changes done for this version |  |  |
+| Date | string | R | Date of the publication of the version | 2024-04-04 |  |
+| Log | string | r | Short explanation of the changes done for this version | New data from year XXXX |  |
