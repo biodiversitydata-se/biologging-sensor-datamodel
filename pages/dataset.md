@@ -69,7 +69,7 @@ Req = requirement: R = required, r = recommended, o = optional.
 ### Reference object
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
-| Title | string | R | Title of the reference |  |
+| title | string | R | Title of the reference |  |
 | DOI | string | r | DOI of the reference |  |
 
 ### Version object
@@ -78,6 +78,6 @@ List the different versions of the dataset. Must be ordered from the most recent
 
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
-| Number | string | R | Number of the version. With the format X_Y. X being the major version number, Y the minor version number. | 2.4 | |
-| Date | string | R | Date of the publication of the version | 2024-04-04 |  |
-| Log | string | r | Short explanation of the changes done for this version | New data from year XXXX |  |
+| number | string | R | Number of the version. With the format X_Y. X being the major version number, Y the minor version number. | 2.4 | |
+| date | string | R | Date of the publication of the version | 2024-04-04 |  |
+| log | string | r | Short explanation of the changes done for this version | New data from year XXXX |  |
