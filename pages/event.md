@@ -4,25 +4,25 @@ Event: An action that occurs at some location during some time. Within biologgin
 
 This can be a hierarchy of events, for example a sequence of measurements event has parentEvent deployment. See also [Darwin Core terms for event](https://dwc.tdwg.org/terms/#event) and [GBIF sampling-ecent data - How to capture hierarchy of events?](https://ipt.gbif.org/manual/en/ipt/latest/best-practices-sampling-event-data#how-to-capture-hierarchy-of-events)
 
-Req = requirement: R = required, r = recommended, o = optional.
+Requirement: M = mandatory, R = recommended, O = optional.
 
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
-| eventID | string | R | Unique identifier for an event (deployment). | 4e72-825a-5fad-2e0d1e901 | [DwC](https://dwc.tdwg.org/terms/#dwc:eventID), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/deploymentID.md) |
-| datasetID | string | R | Identifier of the dataset |  |  |
-| organismID | string | R | Unique identifier for an individual, link data from different deployments or instruments on the same organism. |  | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/organismID.md) |
-| instrumentID | string | R | Identifier to the instrument. |  |  |
-| instrumentSettings | array of string | o | Settings used for the instrument during this event. (flexible format: can be text, key:value pairs, a reference, or URL, DOI)| Sample rate set to every hour |  |
-| eventType | string | R | The type of the event. Using a controlled vocabulary, examples include organismCapture, deployment. | deployment | [DwC](https://dwc.tdwg.org/terms/#dwc:eventType) |
-| eventStart | datetime | R | Timestamp for the start of the event. Provides the start of the time period within which the observations were collected. | 2009-05-21T12:00:00Z | [DwC](https://dwc.tdwg.org/terms/#dwc:eventTime), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/deploymentDateTime.md) | 
-| eventEnd | datetime | o | Timestamp for the end of the event. Provides the end of the time period within which the observations were collected. NULL when data collection is ongoing. | 2021-12-31T12:00:00Z | [DwC](https://dwc.tdwg.org/terms/#dwc:eventTime), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/detachmentDateTime.md) |
-| qualityRemarks | string | r | Comments or notes about the quality of the data recorded for this event. | "data not recorded due to sensor failure"; "data of poor quality"; "no quality issues" |  |
-| eventRemarks | string | o | Comments or notes about the event. |  | [DwC](https://dwc.tdwg.org/terms/#dwc:eventRemarks) |
-| valuesMeasured | array of strings | R | List of values measured by the different sensors and instruments used in this event. | activity, altitude, temperature, pressure | *We need a list here !* |
-| eventTaxon | array of [Taxon](taxon.md) | R |  | (see [Taxon object](taxon.md)) |
-| numberOfRecords | integer | o | Calculated field that stores the number of records in the database for this event. | 123456789 |
-| dateCreated | date | R | The date when the first version of the event was published. (date generated at time of publication) |  |
-| dateUpdated | date | R | The date when the event was last updated. (date generated at time of data update) |  |
+| eventID | string | M | Unique identifier for an event (deployment). | 4e72-825a-5fad-2e0d1e901 | [DwC](https://dwc.tdwg.org/terms/#dwc:eventID), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/deploymentID.md) |
+| datasetID | string | M | Identifier of the dataset |  |  |
+| organismID | string | M | Unique identifier for an individual, link data from different deployments or instruments on the same organism. |  | [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/organismID.md) |
+| instrumentID | string | M | Identifier to the instrument. |  |  |
+| instrumentSettings | array of string | O | Settings used for the instrument during this event. (flexible format: can be text, key:value pairs, a reference, or URL, DOI)| Sample rate set to every hour |  |
+| eventType | string | M | The type of the event. Using a controlled vocabulary, examples include organismCapture, deployment. | deployment | [DwC](https://dwc.tdwg.org/terms/#dwc:eventType) |
+| eventStart | datetime | M | Timestamp for the start of the event. Provides the start of the time period within which the observations were collected. | 2009-05-21T12:00:00Z | [DwC](https://dwc.tdwg.org/terms/#dwc:eventTime), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/deploymentDateTime.md) | 
+| eventEnd | datetime | O | Timestamp for the end of the event. Provides the end of the time period within which the observations were collected. NULL when data collection is ongoing. | 2021-12-31T12:00:00Z | [DwC](https://dwc.tdwg.org/terms/#dwc:eventTime), [biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/detachmentDateTime.md) |
+| qualityRemarks | string | R | Comments or notes about the quality of the data recorded for this event. | "data not recorded due to sensor failure"; "data of poor quality"; "no quality issues" |  |
+| eventRemarks | string | O | Comments or notes about the event. |  | [DwC](https://dwc.tdwg.org/terms/#dwc:eventRemarks) |
+| valuesMeasured | array of strings | M | List of values measured by the different sensors and instruments used in this event. | activity, altitude, temperature, pressure | *We need a list here !* |
+| eventTaxon | array of [Taxon](taxon.md) | M |  | (see [Taxon object](taxon.md)) |
+| numberOfRecords | integer | O | Calculated field that stores the number of records in the database for this event. | 123456789 |
+| dateCreated | date | M | The date when the first version of the event was published. (date generated at time of publication) |  |
+| dateUpdated | date | M | The date when the event was last updated. (date generated at time of data update) |  |
 
 
 ### Vocabulary
