@@ -38,12 +38,13 @@ Req = requirement: R = required, r = recommended, o = optional.
 #### instrumentType
 | Value name | Definition |
 | ---------- | ------ |
-| GPStag | device (tag) containing a GPS sensor, can be a collar, backpack or other. |
-| geolocator |  (tag) that containing a sensor that records records ambient light level to determine location. may contain additional sensors. |
-| PIT | Passive Integrated Transponder |
-| radar |  |
-| (type) |  |
-| (type) |  |
+| gpsTag | Device (tag) containing a GPS sensor, can be a collar, backpack or other. |
+| geolocator |  Device (tag) containing a sensor that records ambient light level to determine location. May contain additional sensors. |
+| PIT | Passive Integrated Transponder, or PIT tag, an internal tag containing a microchip that is activated when it passes close to a scanning device, sending a unique alpha-numeric code back to the reader. (Gibbons WJ & Andrews KM 2004. PIT Tagging: Simple Technology at Its Best. BioScience 54, 447–454, [DOI](https://doi.org/10.1641/0006-3568(2004)054[0447:PTSTAI]2.0.CO;2)) |
+| radar | Detection radar (radar: acronym for radio detection and ranging). A stationed radar unit (antenna) emits pulses of electromagnetic radiation with the beam of pulsed energy moving away from the radar. When something interferes with the beam some of the energy of the initial pulse is scattered and some of the energy from these pulses is reflected back to the radar antenna. The radar provides information the magnitude, extent, distance and location, and speed of the targets detected on radar. (Bruderer B 1997. The Study of Bird Migration by Radar Part 1: The Technical Basis. Naturwissenschaften 84, 1–8, [DOI](https://doi.org/10.1007/s001140050338). Bruderer B 1997. The Study of Bird Migration by Radar Part 2: Major Achievements. Naturwissenschaften 84, 45–54, [DOI](https://doi.org/10.1007/s001140050348)) |
+| tempTag | non-spatial, measures core temperature in the animal. (in WRAM called DST, although DST simply stands for Data Storage Tag) |
+| activityTag | non-spatial, measures heart rate and activity rates. (in WRAM called RVL (Reveal)) |
+| mortalityTag | non-spatial, mortality implant, measures body temperature, heart rate and sends mortality message. (in WRAM called MTI) |
 | (type) |  |
 
 #### sensorType
