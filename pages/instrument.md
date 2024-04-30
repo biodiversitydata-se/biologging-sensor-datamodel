@@ -36,6 +36,8 @@ Req = requirement: R = required, r = recommended, o = optional.
 ### Vocabulary
 
 #### instrumentType
+
+The type of instrument containing the sensor or multiple sensors with which data were collected. All instruments are associated with one or more sensors. 
 | Value name | Definition |
 | ---------- | ------ |
 | gpsTag | Device (tag) containing a GPS sensor, can be a collar, backpack or other. |
@@ -48,6 +50,8 @@ Req = requirement: R = required, r = recommended, o = optional.
 | (type) |  |
 
 #### sensorType
+
+The type of sensor with which data were collected. All sensors are associated with an instrument id, and instruments can contain multiple sensor types. 
 | Value name | Definition |
 | ---------- | ------ |
 | accelerometer |  |
