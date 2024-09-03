@@ -2,7 +2,7 @@
 
 Event: An action that occurs at some location during some time. Within biologging an action can be, for example, the capture of an organims for tagging, the deployment of a device (a collecting or observation equipment), or the recording of observations. Event information includes information relevant to the type of the event, for example, about the organism tagged, tagging protocols followed and tag settings, providing essential information and context for the data collected during the event.
 
-This can be a hierarchy of events, for example a sequence of measurements event has parentEvent deployment. See also [Darwin Core terms for event](https://dwc.tdwg.org/terms/#event) and [GBIF sampling-ecent data - How to capture hierarchy of events?](https://ipt.gbif.org/manual/en/ipt/latest/best-practices-sampling-event-data#how-to-capture-hierarchy-of-events)
+This can be a hierarchy of events, for example a sequence of measurements events has parentEvent deployment. See also [Darwin Core terms for event](https://dwc.tdwg.org/terms/#event) and [GBIF sampling-ecent data - How to capture hierarchy of events?](https://ipt.gbif.org/manual/en/ipt/latest/best-practices-sampling-event-data#how-to-capture-hierarchy-of-events)
 
 Requirement: M = mandatory, R = recommended, O = optional.
 
