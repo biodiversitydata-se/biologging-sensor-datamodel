@@ -2,7 +2,7 @@
 
 Event: An action that occurs at some location during some time. Within biologging an action can be, for example, the capture of an organims for tagging, the deployment of a device (a collecting or observation equipment), or the recording of observations. Event information includes information relevant to the type of the event, for example, about the organism tagged, tagging protocols followed and tag settings, providing essential information and context for the data collected during the event.
 
-This can be a hierarchy of events, for example a sequence of measurements event has parentEvent deployment. See also [Darwin Core terms for event](https://dwc.tdwg.org/terms/#event) and [GBIF sampling-ecent data - How to capture hierarchy of events?](https://ipt.gbif.org/manual/en/ipt/latest/best-practices-sampling-event-data#how-to-capture-hierarchy-of-events)
+This can be a hierarchy of events, for example a sequence of measurements events has parentEvent deployment. See also [Darwin Core terms for event](https://dwc.tdwg.org/terms/#event) and [GBIF sampling-ecent data - How to capture hierarchy of events?](https://ipt.gbif.org/manual/en/ipt/latest/best-practices-sampling-event-data#how-to-capture-hierarchy-of-events)
 
 Requirement: M = mandatory, R = recommended, O = optional.
 
@@ -30,8 +30,7 @@ Requirement: M = mandatory, R = recommended, O = optional.
 #### eventType
 | Value name | Definition |
 | ---------- | ------ |
-| organismCapture | capture and release of an organism, typically for the purpose of attaching an instrument (tag), measurements describing the state of the organism or external conditions at the capture event may be taken. |
-| deployment | spans the period of time a sensor is functioning properly in the field on a particular organism or at a particular location, and may follow a specified protocol. for example, instruments (tags) deployed on a moving organism, or instruments (e.g. radar) installed at a location (e.g. radar station). |
-| tracking | is started after the deployment of an instrument on an organism (e.g. continues recording of scheduled recordings of positions or body temperature),  or triggered by an instrument deployed on an organism when a signal is received by a receiver instrument at a specified location (e.g. PIT tags), or triggered at the same location as the deployment covering the field of view of the instrument (e.g. radar). Each tracking event spans a specific time period defining the bounds of the event. 
-Each tracking event consists of one or more records of values measured by the sensor. |
-| deployOff | recapture and/or tag retrieval ending the deployment or after the deployment ended |
+| organismCapture | During a capture event an organism is captured and released, typically for the purpose of attaching an instrument (tag). Measurements may be taken that describe the state of the organism or external conditions at the capture event. |
+| deployment | A deployment event spans the period of time a sensor is functioning properly in the field on a particular organism or at a particular location, and may follow a specified protocol. For example, instruments (tags) deployed on a moving organism, or instruments (e.g. radar) installed at a location (e.g. radar station). |
+| tracking | A tracking event is started after the deployment of an instrument on an organism (e.g. continous recording of scheduled recordings of positions or body temperature),  or is triggered by an instrument deployed on an organism when a signal is received by a receiver instrument at a specified location (e.g. PIT tags), or is triggered at the same location as the deployment covering the field of view of the instrument (e.g. radar). Each tracking event spans a specific time period defining the bounds of the event. Each tracking event consists of one or more records of values measured by the sensor. |
+| deployOff | During a deployment-off event the animal is recaptured and/or the tag retrieved, ending the deployment. |
