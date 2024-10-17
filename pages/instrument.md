@@ -24,8 +24,8 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | sensorID | string | M | Unique identifier of the sensor. |  |
 | sensorType | string | M | The type of sensor with which data were collected. All sensors are associated with an instrument (tag) id, and instrument can contain multiple sensor types. Each event record is assigned one sensor type. Using controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/instrument.md#sensortype) from a predefined list. |  |
 | sensorManufacturer | string | M | The company or person that produced the sensor. |  |
-| valuesMeasured | array of strings | M | Attribute names of the values measured, as it will be mentioned in the record.recordValues.key Using controlled vocabulary from a predefined list. |  |
-| unitsReported | array of strings | M | Unit of measurement reported. Using controlled vocabulary from a predefined list. | degrees C | [Ocean tracking network, Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/unitsReported.md]) |
+| valuesMeasured | array of strings | M | Attribute names of the values measured, as it will be mentioned in the record.recordValues.key Using controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/instrument.md#valuesmeasured-and-unitsreported) from a predefined list. |  |
+| unitsReported | array of strings | M | Unit of measurement reported. Using controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/instrument.md#valuesmeasured-and-unitsreported) from a predefined list. | degrees C | [Ocean tracking network, Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/unitsReported.md]) |
 | sensorPrecision | string | R |  |  |
 | range | string | R |  |  |
 | settings | string | O |  |  |
