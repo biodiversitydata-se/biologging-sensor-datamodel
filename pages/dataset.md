@@ -85,41 +85,6 @@ List the different versions of the dataset. Must be ordered from the most recent
 
 
 
-## Instrument
-
-The instrument metadata contain all information pertaining to the biologging instrument used to collect data in the dataset. Instrument specifications encompass also specifications for the included sensors, i.e. the device sensitive to light, temperature, radiation level, or the like, and that transmits a signal. Here we use instrument synonymous for device or tag.
-
-Req = Requirement: M = mandatory, R = recommended, O = optional.
-
-| Field name | Format | Req | Definition | Example | Reference |
-| ---------- | ------ | --- | ---------- | ------- | --------- |
-| instrumentID |  | M | Unique identifier of the instrument. Can be the instrument serial number, or other similar identification system used by the manufacturer. |  | [Ocean tracking network, Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentID.md) |
-| projectID | string | M | The project this instrument belongs to. | LU_geolocator_great_snipes_AL |
-| instrumentType | enum | M | Type of instrument. Using controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/instrument.md#instrumenttype) from a predefined list. | gpsTag | [Ocean tracking network, Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentType.md) |
-| instrumentModel | string | M | Name of specific instrument model deployed. |  | [Ocean tracking network, Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentModel.md) |
-| instrumentManufacturer | string | M |  The company or person that produced the instrument. | Vectronic Aerospace | [Ocean tracking network, Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentManufacturer.md) |
-| instrumentSerialNumber | string | M | Serial number of the instrument. | 09A0178 | [Ocean tracking network, Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentSerialNumber.md) |
-| instrumentCharacteristics | array | M | List of characteristics for an instrument | array("wavelength" => "X-band", "power" => "200 kW", "pulseDuration" => "0.25 microseconds", "pulseRepetition" => "504 Hz", "beamWidth" => "1.5 deg (-3db)") |
-| sensors | array of sensors | M | Specifications for the sensors included in the instrument. | (see [Sensor object](#sensor-object)) |
-
-
-### Sensor object
-
-
-| Field name | Format | Req | Definition | Example | Reference |
-| ---------- | ------ | --- | ---------- | ------- | --------- |
-| sensorID | string | M | Unique identifier of the sensor. |  |
-| sensorType | string | M | The type of sensor with which data were collected. All sensors are associated with an instrument (tag) id, and instrument can contain multiple sensor types. Each event record is assigned one sensor type. Using controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/instrument.md#sensortype) from a predefined list. |  |
-| sensorManufacturer | string | M | The company or person that produced the sensor. |  |
-| valuesMeasured | array of strings | M | Attribute names of the values measured, as it will be mentioned in the record.recordValues.key Using controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/instrument.md#valuesmeasured-and-unitsreported) from a predefined list. |  |
-| unitsReported | array of strings | M | Unit of measurement reported. Using controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/instrument.md#valuesmeasured-and-unitsreported) from a predefined list. | degrees C | [Ocean tracking network, Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/unitsReported.md]) |
-| sensorPrecision | string | R |  |  |
-| range | string | R |  |  |
-| settings | string | O |  |  |
-| calibrationDate | string | R |  |  |
-| calibrationDetails | string | R |  |  |
-
-
 ### Vocabulary
 
 #### dataAccess
