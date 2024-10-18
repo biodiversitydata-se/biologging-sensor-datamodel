@@ -20,7 +20,7 @@ Requirement: M = mandatory, R = recommended, O = optional.
 | eventRemarks | string | O | Comments or notes about the event. |  | [DwC](https://dwc.tdwg.org/terms/#dwc:eventRemarks) |
 | valuesMeasured | array of strings | M | List of values measured by the different sensors and instruments used in this event. | activity, altitude, temperature, pressure | *We need a list here !* |
 | eventTaxon | array of [Taxon](taxon.md) | M |  | (see [Taxon object](taxon.md)) |
-| organismPublic | string | M | Ineherited field that tells if the data from the animal recorded can be published (based on isPublic field in [Organism](organism.md) object) | true | |
+| organismPublic | string | M | Inherited field that tells if the data from the animal recorded can be published (based on isPublic field in [Organism](organism.md) object) | true | |
 | numberOfRecords | integer | O | Calculated field that stores the number of records in the database for this event, public and not public. | 123456789 |
 | dateCreated | date | M | The date when the first version of the event was published. (date generated at time of publication) |  |
 | dateUpdated | date | M | The date when the event was last updated. (date generated at time of data update) |  |
