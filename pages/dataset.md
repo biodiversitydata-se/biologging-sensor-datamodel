@@ -27,7 +27,7 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | taxonomicCoverage | array of [Taxon](taxon.md) | M |  | [GBIF metadata profile: taxonomicClassification](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#taxonomic-coverage) (see [Taxon object](taxon.md)) |
 | embargoEndDate | date | O | Date when embargo on open access ends (if any). | 2030-01-01 | [DataCite schema: Available](https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf) |
 | isPublic | boolean | O | Indicator of whether the dataset is free to use. | true | . |
-| dataAvailability | string | O | Details if all the data is available, or if some data for certain animals  is not public, which could explain the difference between the numberOfRecords of the dataset and the downloadable file. Using a controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/dataset.md#dataaccess) from a predefined list. | Only the data about the great snipes is under embargo until XXXX-XX-XX. | 
+| accessRights | string | O | Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Restricted access can explain the difference between the numberOfRecords for the dataset and number of records in the downloadable file. Using a controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/dataset.md#accessrights) from a predefined list. | see [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/dataset.md#accessrights) | 
 | updateFrequency | string | O | The frequency with which changes are made to the dataset after the initial dataset has been published. Values, e.g.: daily, monthly, weekly, annually, biannually, irregular, asNeeded, notPlanned, unknown. | asNeeded | [EML schema](https://eml.ecoinformatics.org/schema/) |
 | geographicCoverage | [GeographicWENS](#geographicwens-object) | M | Spatial information about the dataset. | [GBIF metadata profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#geographic-coverage) (see GeographicWENS object) |
 | temporalCoverage| array of RangeDatetime | M | Information about dates or date ranges covered by the resource. Coverages may refer to the times during which the collection or data set was assembled. | (see RangeDatetime object) |
@@ -75,7 +75,7 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 
 ### Version object
 
-List the different versions of the dataset. Must be ordered from the most recent to the oldest version. 
+List of the different versions of the dataset. Must be ordered from the most recent to the oldest version. 
 
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
@@ -87,11 +87,11 @@ List the different versions of the dataset. Must be ordered from the most recent
 
 ### Vocabulary
 
-#### dataAccess
+#### accessRights
 
-Text explanation. 
+Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Three levels of data access. 
 | Value name | Definition |
 | ---------- | ------ |
-| value1 | description. |
-| value2 | description. |
-| value3 | description. |
+| data freely accessible | All data contained in the dataset are freely accessible by direct download from the website. |
+| data partly accessible | Access to the full dataset is restricted (embargo until YYYY-MM-DD). A sample of records (individual records, or selected events or organisms) is made public by the dataset owner and can be viewed and downloaded from the website. For more information about the full dataset and access please contact the dataset owner. |
+| restricted access | Access to the full dataset is restricted (embargo until YYYY-MM-DD). No data can be viewed or downloaded from the website. For more information about the dataset and access please contact the dataset owner. |
