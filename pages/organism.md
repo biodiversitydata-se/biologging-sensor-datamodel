@@ -11,7 +11,7 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | datasetID | string | M | The dataset this organism has been registered in | geolocator_great_snipes_AL | |
 | internalOrganismId | string | M | Animal identifier within the dataset |  | |
 | isPublic | boolean | M | Indicator of whether the data linked to this organism is public or not. | true |  |
-| customProperties | array | M | List of properties for an organism | array("sex" => "female", "age" => "2") | |
+| customProperties | array of strings | M | List of properties for an organism | array("sex" => "female", "age" => "2") | |
 | organismTaxon | [Taxon](taxon.md) | M | The taxon info of the organism | (see [Taxon object](taxon.md)) | |
 
 
