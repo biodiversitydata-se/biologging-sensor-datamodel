@@ -93,6 +93,6 @@ List of the different versions of the dataset. Must be ordered from the most rec
 Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Three levels of data access. 
 | Value name | Definition |
 | ---------- | ------ |
-| data freely accessible | All data contained in the dataset are freely accessible by direct download from the website. |
-| data partly accessible | Access to the full dataset is restricted (embargo until YYYY-MM-DD). A sample of records (individual records, or selected events or organisms) is made public by the dataset owner and can be viewed and downloaded from the website. For more information about the full dataset and access please contact the dataset owner. |
-| restricted access | Access to the full dataset is restricted (embargo until YYYY-MM-DD). No data can be viewed or downloaded from the website. For more information about the dataset and access please contact the dataset owner. |
+| full open access | All data contained in the dataset are freely accessible by direct download from the website. |
+| partial open access | Access to the full dataset is restricted (embargo until YYYY-MM-DD). A sample of records (individual records, or selected events or organisms) is made public by the dataset owner and can be viewed and downloaded from the website. For more information about the full dataset and access please contact the dataset owner. |
+| no open access | Access to the full dataset is restricted (embargo until YYYY-MM-DD). No data can be viewed or downloaded from the website. For more information about the dataset and access please contact the dataset owner. |
