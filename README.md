@@ -19,7 +19,7 @@ A Data Dictionary is a collection of names, definitions, and attributes about da
 ### Data model
 
 <div align="left">
-	<img width = "50%" src="https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/datamodel_overview_20241107.jpg">
+	<img width = "50%" src="https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/images/datamodel_overview_20241107.jpg">
 </div>
 
 Description of data model: A project comprises one or more datasets. Each dataset contains a core of events (deployments) defining the location and duration of an event and additional event properties. The event core is extended by information about the organism that is acting during the event, one or more instruments used during the event, one or more sensors used during the event, extended measurements or facts linked to the event (deployment), and the data records collected during the event.
