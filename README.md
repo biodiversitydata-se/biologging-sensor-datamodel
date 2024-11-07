@@ -18,7 +18,8 @@ A Data Dictionary is a collection of names, definitions, and attributes about da
 
 ### Data model
 
-PICTURE - placeholder. illustration of data model
+![datamodel_overview_20241107](https://github.com/user-attachments/assets/faf5e5a4-5e2f-44d4-b150-99840a9f232a)
+
 
 Description of data model: A project comprises one or more datasets. Each dataset contains a core of events (deployments) defining the location and duration of an event and additional event properties. The event core is extended by information about the organism that is acting during the event, one or more instruments used during the event, one or more sensors used during the event, extended measurements or facts linked to the event (deployment), and the data records collected during the event.
 
