@@ -53,6 +53,12 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | userId | string | O | An identifier that links to a directory of individuals. For example, personal: ORCID Id; organisational: ROR ID | 0000-0002-5597-6209 |
 | webpage | url | O | A permanent link to the contact person | |
 
+### Funder object
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
+| funderName | string | R | Name of the funding provider. | Swedish Research Council VR | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/fundingreference/#fundername), [EML](https://eml.ecoinformatics.org/schema/) |
+| url | string | O | Link to the webpage of the funding provider. |  |  |
+
 ### GeographicWENS object
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
@@ -73,12 +79,6 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | title | string | M | Title of the reference |  |
 | DOI | string | R | DOI of the reference |  |
-
-### Funder object
-| Field name | Format | Req | Definition | Example | Reference |
-| ---------- | ------ | --- | ---------- | ------- | --------- |
-| name | string | R | Name of the funder. | Swedish Research Council VR | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/fundingreference/#fundername), [EML](https://eml.ecoinformatics.org/schema/) |
-| url | string | O | Link to the page of the funding. |  |  |
 
 ### Version object
 
