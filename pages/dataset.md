@@ -27,15 +27,14 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | instrumentTypes | array of strings | M | List of instrument types used in this dataset. | Multi-sensor archival datalogger, GPS Collar | [Biologging standardization](https://github.com/ocean-tracking-network/biologging_standardization/blob/master/templates/fields/instrumentType.md) |
 | taxonomicCoverage | array of [Taxon](taxon.md) | M |  | [GBIF metadata profile: taxonomicClassification](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#taxonomic-coverage) (see [Taxon object](taxon.md)) |
 | embargoEndDate | date | O | Date when embargo on open access ends (if any). | 2030-01-01 | [DataCite schema: Available](https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf) |
-| accessRights | [enum](#accessRights) | R | Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Restricted access can explain the difference between the numberOfRecords for the dataset and number of records in the downloadable file. Using a controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/dataset.md#accessrights) from a predefined list. | see [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/dataset.md#accessrights) | [DwC](https://dwc.tdwg.org/terms/#dcterms:accessRights) |
+| accessRights | [enum](#accessRights-enum) | R | Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Restricted access can explain the difference between the numberOfRecords for the dataset and number of records in the downloadable file. Using a controlled [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/dataset.md#accessrights) from a predefined list. | see [vocabulary](https://github.com/biodiversitydata-se/biologging-sensor-datamodel/blob/main/pages/dataset.md#accessrights) | [DwC](https://dwc.tdwg.org/terms/#dcterms:accessRights) |
 | intellectualRights | string | O | An optional rights management statement for the dataset, for right information regarding usage additional to Copyright covered by the chosen dataset license. Might include requirements for use, requirements for attribution, or other requirements the owner would like to impose. | Free for use by all individuals provided attribution of the original work if this dataset is used, modified and/or distributed in whole or in parts, including acknowledging the owners in any use or publication. | [GBIF Metadata Profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#intellectual-property-rights), [EML](https://eml.ecoinformatics.org/schema/) |
 | updateFrequency | string | O | The frequency with which changes are made to the dataset after the initial dataset has been published. Values, e.g.: daily, monthly, weekly, annually, biannually, irregular, asNeeded, notPlanned, unknown. | asNeeded | [EML schema](https://eml.ecoinformatics.org/schema/) |
 | geographicCoverage | [GeographicWENS](#geographicwens-object) | M | Spatial information about the dataset. | [GBIF metadata profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#geographic-coverage) (see GeographicWENS object) |
 | temporalCoverage| array of RangeDatetime | M | Information about dates or date ranges covered by the resource. Coverages may refer to the times during which the collection or data set was assembled. | (see RangeDatetime object) |
 | samplingDescription | string | O | A description of what sampling methods and procedures are or have been used to collect the data represented in the dataset. The description can be augmented by the listing of names or references to methods or sampling procedures. When applicable, specify whether physical measurements (e.g. length, mass, etc.) of organisms were taken. When applicable describe the type(s) of individuals included or excluded when sampling due to developmental stage (e.g. adult, reproductive, larval), and size classes included or excluded (e.g. only small mammals). |  | [GBIF metadata profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#methods) |
 | qualityControl | string | O | Information on possible errors or on the quality of a data set: Description of actions taken to either control or assess the quality of data. A quality control description should identify a quality goal and describe prescriptive steps taken to ensure that the data meet those standards and/or postscriptive steps taken to assess the extent to which they are met. Description may refer to instrumentation or software used, and include a reference to a protocol. |  | [GBIF metadata profile](https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#methods) |
-| relatedIdentifier | string | O | Identifiers of related resources (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank). These must be globally unique identifiers. | 49915781 |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
-| relationType | string | O | If RelatedIdentifier is used, relationType is mandatory. Use from vocabulary: Cites, IsCitedBy, IsSupplementedBy, IsSupplementTo, Describes, IsDescribedBy, IsVersionOf, HasVersion, IsPartOf, HasPart, HasMetadata. | HasMetadata | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) |
+| relatedIdentifiers | array of [RelatedIdentifier](#relatedIdentifier-object) | O | Identifiers of related resources (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank). These must be globally unique identifiers. | 49915781 |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
 | versions | array of [Version](#version-object) | O | The historic of the different versions of the resource. Ordered from the most recent one to the older one. |  |
 | sensitiveData | boolean | R | Specifies whether data contain protected information, i.e. data contain information that is protected by legislation, e.g. the Species Protection Ordinance. Sensitive data may also apply to information contained in data of records of protected species, disclosure of which may lead to risks for the species. | TRUE |
 | pictureUrl | url | R | Url of a picture that can be used for representing the dataset. | |
@@ -80,6 +79,13 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | title | string | M | Title of the reference |  |
 | DOI | string | R | DOI of the reference |  |
 
+### RelatedIdentifier object
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
+| providerCode | [enum](#providerCode-enum) | M | Code of the provider for the relatedIdentifier |  |
+| relationType | [enum](#relationType-enum) | M | Type of relation used from the list. | HasMetadata | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) |
+| identifier | string | M | Unique identifier of related resource (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank). | 49915781 |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
+
 ### Version object
 
 List of the different versions of the dataset. Must be ordered from the most recent to the oldest version. 
@@ -94,7 +100,7 @@ List of the different versions of the dataset. Must be ordered from the most rec
 
 ### Vocabulary
 
-#### accessRights
+#### accessRights enum
 
 Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Three levels of data access. 
 | Value name | Definition |
@@ -102,3 +108,29 @@ Information about whether all of the data is accessible, or only data for certai
 | full open access | All data contained in the dataset are freely accessible by direct download from the website. |
 | partial open access | Access to the full dataset is restricted (embargo until YYYY-MM-DD). A sample of records (individual records, or selected events or organisms) is made public by the dataset owner and can be viewed and downloaded from the website. For more information about the full dataset and access please contact the dataset owner. |
 | no open access | Access to the full dataset is restricted (embargo until YYYY-MM-DD). No data can be viewed or downloaded from the website. For more information about the dataset and access please contact the dataset owner. |
+
+
+#### providerCode enum
+
+Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Three levels of data access. 
+| Value name | Definition |
+| ---------- | ------ |
+| Movebank | Dataset coming from Movebank |
+
+#### relationType enum
+
+Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Three levels of data access. 
+| Value name | Definition |
+| ---------- | ------ |
+| Cites |  |
+| IsCitedBy |  |
+| IsSupplementedBy |  |
+| IsSupplementTo |  |
+| Describes |  |
+| IsDescribedBy |  |
+| IsVersionOf |  |
+| HasVersion |  |
+| IsPartOf |  |
+| HasPart |  |
+| HasMetadata |  |
+
