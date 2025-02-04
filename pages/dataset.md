@@ -85,7 +85,7 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | providerCode | [enum](#providerCode-enum) | M | Code of the provider for the relatedIdentifier |  |
 | relationType | [enum](#relationType-enum) | M | Type of relation used from the list. | HasMetadata | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) |
 | identifier | string | M | Unique identifier of related resource (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank). | 49915781 |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
-| resourceUrl | url | M | Direct url to the resource. |  |  |
+| resourceUrl | url | R | Direct url to the resource. |  |  |
 
 
 ### Version object
