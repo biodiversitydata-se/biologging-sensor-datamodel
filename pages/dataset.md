@@ -84,7 +84,7 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | providerCode | [enum](#providerCode-enum) | M | Code of the provider for the relatedIdentifier |  |
 | relationType | [enum](#relationType-enum) | M | Type of relation used from the list. | HasMetadata | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relationType/) |
-| identifier | string | M | Unique identifier of related resource (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank). | 49915781 |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
+| relatedResourceID | string | M | Unique identifier of related resource (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank). | 49915781 |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
 | resourceUrl | url | R | Direct url to the resource. |  |  |
 
 
@@ -114,14 +114,14 @@ Information about whether all of the data is accessible, or only data for certai
 
 #### providerCode enum
 
-Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Three levels of data access. 
+The name or acronym used by the provider for the related resource. 
 | Value name | Definition |
 | ---------- | ------ |
-| Movebank | Dataset coming from Movebank |
+| Movebank | Dataset stored at the [Movebank data repository](https://www.movebank.org/cms/movebank-content/data-repository). |
 
 #### relationType enum
 
-Information about whether all of the data is accessible, or only data for certain animals with the remaining data being not public. Three levels of data access. 
+The relationship of the subject (dataset, identified by datasetID) to the object (related resource, identified by relatedResourceID). 
 | Value name | Definition |
 | ---------- | ------ |
 | Cites |  |
