@@ -127,12 +127,12 @@ The relationship of the subject (dataset, identified by datasetID) to the object
 | Cites |  |
 | IsCitedBy |  |
 | IsSupplementedBy |  |
-| IsSupplementTo |  |
+| IsSupplementTo | The resource (dataset) is supplement to a related resource. |
 | Describes |  |
 | IsDescribedBy |  |
 | IsVersionOf |  |
 | HasVersion |  |
 | IsPartOf |  |
 | HasPart |  |
-| HasMetadata |  |
+| HasMetadata | The resource has metadata for a dataset stored elsewhere. For example a data stored at the Movebank data repository. |
 
