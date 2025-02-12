@@ -71,7 +71,7 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | pictureUrl | url | M | Url of the picture |  |
-| pictureOwner | string | R | Owner of the reference |  |
+| pictureOwner | string | R | Owner of the picture |  |
 
 ### RangeDatetime object
 | Field name | Format | Req | Definition | Example | Reference |
