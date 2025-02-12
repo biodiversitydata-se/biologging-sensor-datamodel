@@ -37,7 +37,7 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | relatedIdentifiers | array of [RelatedIdentifier](#relatedIdentifier-object) | O | Identifiers of related resources (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank).  |  |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
 | versions | array of [Version](#version-object) | O | The historic of the different versions of the resource. Ordered from the most recent one to the older one. |  |
 | sensitiveData | boolean | R | Specifies whether data contain protected information, i.e. data contain information that is protected by legislation, e.g. the Species Protection Ordinance. Sensitive data may also apply to information contained in data of records of protected species, disclosure of which may lead to risks for the species. | TRUE |
-| pictureUrl | url | R | Url of a picture that can be used for representing the dataset. | |
+| picture | [Picture](#picture-object) | R | Url and owner of a picture that can be used for representing the dataset. | |
 | isFinalized | boolean | M | Indicates whether the dataset is ongoing or ended. TRUE if the dataset has been ended. | FALSE |
 | numberOfRecords | integer | O | Calculated field that stores the number of records in the database for this dataset, public and not public. | 123456789 |
 | dateCreated | date | M | The date when the first version of the dataset was published. (date generated at time of publication) |  |
@@ -56,7 +56,7 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | funderName | string | R | Name of the funding provider. | Swedish Research Council VR | [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/fundingreference/#fundername), [EML](https://eml.ecoinformatics.org/schema/) |
-| url | string | O | Link to the webpage of the funding provider. |  |  |
+| funderUrl | url | O | Link to the webpage of the funding provider. |  |  |
 
 ### GeographicWENS object
 | Field name | Format | Req | Definition | Example | Reference |
@@ -66,6 +66,12 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | northBoundCoordinate | string | M | Northern longitudinal dimension of the bounding box. In decimal degrees, with the standard limiting values of -90 to +90 latitude (South/North) and -180 to +180 longitude (West/East). | 64.090 |
 | southBoundCoordinate | string | M | Southern longitudinal dimension of the bounding box. In decimal degrees, with the standard limiting values of -90 to +90 latitude (South/North) and -180 to +180 longitude (West/East). | 61.6859 |
 | geographicalDescription | string | O | Textual description of the geographic coverage (geographic scope), i.e. the spatial region or named place where the data was gathered or about which the data is focused. |  |
+
+### Picture object
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
+| pictureUrl | url | M | Url of the picture |  |
+| pictureOwner | string | R | Owner of the reference |  |
 
 ### RangeDatetime object
 | Field name | Format | Req | Definition | Example | Reference |
