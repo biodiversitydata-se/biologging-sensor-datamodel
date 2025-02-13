@@ -103,6 +103,7 @@ List of the different versions of the dataset. Must be ordered from the most rec
 | number | string | R | Number of the version. With the format X_Y. X being the major version number, Y the minor version number. | 2.4 | |
 | date | string | R | Date of the publication of the version | 2024-04-04 |  |
 | log | string | r | Short explanation of the changes done for this version | New data from year XXXX |  |
+| file | string | r | Name of the downloadable file if it exists | geolocator_aves_json_1_0.zip |  |
 
 
 
