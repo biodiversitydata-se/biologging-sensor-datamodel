@@ -2,7 +2,7 @@
 
 Dataset: A set of data sharing (all or most) properties and that can be described by the same metadata.
 
-Req = Requirement: M = mandatory, R = recommended, O = optional.
+Req = Requirement: M = mandatory, R = recommended, O = optional, A : automatically filled in.
 
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
@@ -39,7 +39,8 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | sensitiveData | boolean | R | Specifies whether data contain protected information, i.e. data contain information that is protected by legislation, e.g. the Species Protection Ordinance. Sensitive data may also apply to information contained in data of records of protected species, disclosure of which may lead to risks for the species. | TRUE |
 | picture | [Picture](#picture-object) | R | Url and owner of a picture that can be used for representing the dataset. | |
 | isFinalized | boolean | M | Indicates whether the dataset is ongoing or ended. TRUE if the dataset has been ended. | FALSE |
-| numberOfRecords | integer | O | Calculated field that stores the number of records in the database for this dataset, public and not public. | 123456789 |
+| numberOfRecords | integer | O | Total number of records for this dataset, including all the records not stored in our biologging database. | 123456789 |
+| recordsStatistics | [recordsStatistics](#recordsstatistics-object) | A | Records statistics for the dataset | | |
 | dateCreated | date | M | The date when the first version of the dataset was published. (date generated at time of publication) |  |
 | dateUpdated | date | M | The date when the dataset was last updated. (date generated at time of data update) |  |
 
@@ -79,6 +80,13 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | startDatetime | datetime | M | The start date of the time period within which the observations were collected. | 2009-05-21T12:00:00Z | |
 | endDatetime | datetime | O | The end date of the time period within which the observations were collected. NULL when data collection is ongoing. | 2021-12-31T12:00:00Z | |
 
+### RecordsStatistics object
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
+| numberOfPublicRecordsDatabase | integer | M | Total number of records available for download from our database. Automatically calculated |  |
+| customStatistics | array of [CustomStatistic](#customstatistic-object) | R | Custom statistics of records stored in the database |  |
+
+
 ### Reference object
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
@@ -93,6 +101,12 @@ Req = Requirement: M = mandatory, R = recommended, O = optional.
 | relatedResourceID | string | M | Unique identifier of related resource (e.g. relate to subsets, or a species list, or data at other repository as e.g. Movebank). | 49915781 |  [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/relatedidentifier/) |
 | resourceUrl | url | R | Direct url to the resource. |  |  |
 
+### CustomStatistic object
+| Field name | Format | Req | Definition | Example | Reference |
+| ---------- | ------ | --- | ---------- | ------- | --------- |
+| nameStat | string | M | Name of the statistic | Can be a sensorType for instance |
+| valueStat | integer | M | value of the statistic |  |
+| dateStat | date | A | date when the statistic was last calculated |
 
 ### Version object
 
@@ -102,8 +116,8 @@ List of the different versions of the dataset. Must be ordered from the most rec
 | ---------- | ------ | --- | ---------- | ------- | --------- |
 | number | string | R | Number of the version. With the format X_Y. X being the major version number, Y the minor version number. | 2.4 | |
 | date | string | R | Date of the publication of the version | 2024-04-04 |  |
-| log | string | r | Short explanation of the changes done for this version | New data from year XXXX |  |
-| file | string | r | Name of the downloadable file if it exists | geolocator_aves_json_1_0.zip |  |
+| log | string | O | Short explanation of the changes done for this version | New data from year XXXX |  |
+| file | string | O | Name of the downloadable file if it exists | geolocator_aves_json_1_0.zip |  |
 
 
 
