@@ -104,9 +104,9 @@ Req = Requirement: M = mandatory, R = recommended, O = optional, A : automatical
 ### CustomStatistic object
 | Field name | Format | Req | Definition | Example | Reference |
 | ---------- | ------ | --- | ---------- | ------- | --------- |
-| nameStat | string | M | Name of the statistic | Can be a sensorType for instance |
-| valueStat | integer | M | value of the statistic |  |
-| dateStat | date | A | date when the statistic was last calculated |
+| nameStat | string | M | Name of the statistic | numberOfRecordsAcceloremeterSensor |
+| valueStat | integer | M | 166 105 |  |
+| dateStat | date | A | 2025-02-28 |
 
 ### Version object
 
